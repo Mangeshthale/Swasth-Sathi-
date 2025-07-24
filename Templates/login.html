@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asha Worker Sign-In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            display: inline-block;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Asha Worker Sign-In</h2>
+        <input type="text" id="ashaId" placeholder="Enter Asha-ID" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button onclick="validateLogin()">Sign In</button>
+        <p id="error" style="color: red;"></p>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const ashaId = document.getElementById("ashaId").value;
+            const password = document.getElementById("password").value;
+            const correctAshaId = "MH1243";
+            const correctPassword = "asha@123"; // Set your password here
+
+            if (ashaId === correctAshaId && password === correctPassword) {
+                window.location.href = "asha.html";
+            } else {
+                document.getElementById("error").innerText = "Invalid Asha-ID or Password!";
+            }
+        }
+    </script>
+</body>
+</html>
