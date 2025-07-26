@@ -39,3 +39,4 @@ wheel==0.44.0
 xlrd==2.0.1
 scikit-learn
 joblib
+pygame==2.5.2
