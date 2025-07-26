@@ -19,7 +19,7 @@ diets = pd.read_csv("diets.csv")
 
 
 # load model===========================================
-svc = pickle.load(open('svc.pkl','rb'))
+svc = pickle.load(open('mnb.pkl','rb'))
 
 
 #============================================================
