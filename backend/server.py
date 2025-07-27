@@ -8,7 +8,7 @@ import pygame
 app = Flask(__name__, template_folder="templates")
 
 # 🔹 Configure Gemini API Key
-genai.configure(api_key=GOOGLE_API_KEY)  # Replace with your real API key
+genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))   # Replace with your real API key
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 chat = model.start_chat()
