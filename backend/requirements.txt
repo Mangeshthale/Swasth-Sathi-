@@ -40,3 +40,5 @@ xlrd==2.0.1
 scikit-learn
 joblib
 pygame
+pandas
+numpy
